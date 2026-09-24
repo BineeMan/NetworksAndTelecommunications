@@ -10,7 +10,7 @@ import java.nio.charset.Charset
 
 class FileSender(val host: String, val port: Int) {
 
-    val bufferSize = 64 * 1042
+    val bufferSize = 16 * 1042
 
     public fun sendFile(file: File) : Boolean {
         require(file.exists()) { "Указанный файл не существует: ${file.path}" };
@@ -36,7 +36,8 @@ class FileSender(val host: String, val port: Int) {
                 val buffer = ByteArray(bufferSize);
                 var bytesRead = 0;
                 while (fileIn.read(buffer).also { bytesRead = it } != -1) {
-                    out.write(buffer, 0, bytesRead);
+                    out.write(buffer, 0, bytesRead)
+                    Thread.sleep(1)
                 }
             }
 

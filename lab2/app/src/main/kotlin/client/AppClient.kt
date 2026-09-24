@@ -18,11 +18,7 @@ fun main(args: Array<String>) {
     }
 
     println("Отправляем файл через $filePathString")
-
-
     val fileSender = FileSender(host, port)
-
     val result = fileSender.sendFile(filePath.toFile())
-
     println(if (result) "Успешно передали файл" else "Файл не удалось передать")
 }

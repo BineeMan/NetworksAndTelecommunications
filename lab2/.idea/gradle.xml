@@ -16,6 +16,7 @@
           </compositeBuild>
         </compositeConfiguration>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="openjdk-26" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -24,7 +25,6 @@
             <option value="$PROJECT_DIR$/utils" />
           </set>
         </option>
-        <option name="myGradleHome" value="" />
       </GradleProjectSettings>
     </option>
   </component>
